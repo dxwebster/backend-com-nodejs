@@ -12,10 +12,11 @@ app.use(express.json()); //fala pro express que vai usar json / precisa vir no c
 // Enquanto a aplicação estiver sendo executada, as informações contidas na variável vão estar disponíveis pra todo o projeto
 // se a aplicação fechar ou reiniciar, ela volta no valor vazio
 const projects = [];
+```
 
-// ---------------------------------------------------------------------- 
-// ----------------- Listar projeto com filtros  ------------------------
-// ----------------------------------------------------------------------
+## Listar projeto com filtros
+
+```tsx
 app.get('/projects', (request, response) => {
     const { title } = request.query;
 
@@ -27,10 +28,11 @@ app.get('/projects', (request, response) => {
     
     return response.json(results);
 });
+```
 
-// -------------------------------------------------------------------- 
-// ----------------------- Criação de um projeto ---------------------- 
-// -------------------------------------------------------------------- 
+## Criação de um projeto 
+
+```tsx
 app.post('/projects', (request, response) => {
     const {title, owner} = request.body;
     
@@ -40,10 +42,13 @@ app.post('/projects', (request, response) => {
     //exibe o projeto recém criado
     return response.json(project); 
 })
+```
 
-// -------------------------------------------------------------------- 
-// ----------------------- Atualiza um projeto  -----------------------
-// --------------------------------------------------------------------   
+
+## Atualiza um projeto 
+
+
+```tsx
 app.put('/projects/:id', (request, response) => {
     const {id} = request.params;
     const {title, owner} = request.body;
@@ -69,10 +74,12 @@ app.put('/projects/:id', (request, response) => {
     // retorno o projeto atualizado
     return response.json(project); 
 });
+```
 
-// -------------------------------------------------------------------- 
-// ----------------------- Deleta um projeto  -----------------------
-// --------------------------------------------------------------------  
+## Deleta um projeto 
+
+
+```tsx
 app.delete('/projects/:id', (request, response) => {
     const {id} = request.params;
     
