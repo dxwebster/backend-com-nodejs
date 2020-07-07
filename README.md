@@ -9,7 +9,8 @@ const app = express();
 app.use(express.json()); //fala pro express que vai usar json / precisa vir no começo da aplicação
 
 // Armazena uma variável na memória da aplicação (apenas para desenvolvimento)
-// Enquanto a aplicação estiver sendo executada, as informações contidas na variável vão estar disponíveis pra todo o projeto
+// Enquanto a aplicação estiver sendo executada...
+// ...as informações contidas na variável vão estar disponíveis pra todo o projeto
 // se a aplicação fechar ou reiniciar, ela volta no valor vazio
 const projects = [];
 ```
@@ -68,7 +69,8 @@ app.put('/projects/:id', (request, response) => {
         owner,
     };
 
-    // no array projects eu procuro na posição projectIndex e substituo a posição pelas atualizações de projeto que acabei de criar
+    // no array projects eu procuro na posição projectIndex e...
+    // ...substituo a posição pelas atualizações de projeto que acabei de criar
     projects[projectIndex] = project;
     
     // retorno o projeto atualizado
