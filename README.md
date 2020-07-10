@@ -11,29 +11,29 @@ Insomnia
 
 ## 🗂 Como criar esse projeto do zero
 
-### Instalação das bibliotecas
+## Instalação das bibliotecas
 
-Instalar o Node 
+**Instalar o Node**
     
     Fazer o donwload em https://nodejs.org/en/
 
-Instalar o yarn
+**Instalar o yarn**
 
     npm install -g yarn
 
-Criar uma pasta server e iniciar o node na pasta (cria o arquivo 'package.json')
+**Criar uma pasta server e iniciar o node na pasta** (cria o arquivo 'package.json')
 
     yarn init -y
 
-Instalar o Express (cria a pasta 'node_modules' e o arquivo 'package-lock.json')
+**Instalar o Express** (cria a pasta 'node_modules' e o arquivo 'package-lock.json')
     
     yarn add express -D
 
-Instalar a definição de tipos do Express
+**Instalar a definição de tipos do Express**
 
     yarn add @types/express -D
     
-Instalar o Nodemon que vai detectar toda a alteração do código e reiniciar o servidor
+**Instalar o Nodemon**, que vai detectar toda a alteração do código e reiniciar o servidor
 
     yarn add nodemon -D
 
@@ -41,13 +41,13 @@ No arquivo package.json, criar um script 'dev' para encurtar o comando de execu�
 
     "dev": nodemon src/index.js"
 
-Instalar uma biblioteca que vai nos trazer ids diferentes para cada item criado
+**Instalar o uuidv4**, uma biblioteca que vai nos trazer ids diferentes para cada item criado
 
     yarn add uuidv4
 
 Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escrever nossos códigos nesse arquivo index.js.
 
-### Primeiros códigos
+## Primeiros códigos
 
 As primeiras linhas de código são as importações das bibliotecas que serão utilizadas na aplicação.
 
@@ -86,8 +86,7 @@ Nossas rotas que irão listar, criar, deletar, e atualizar projetos vão ficar s
 [Código app.listen()]
 ```
 
-
-### Listar projeto com filtros
+## Listar projeto com filtros
 Com o método get, consigo gerar uma lista de todos os projetos que existem. E com o método filter() consigo fazer filtros, ou seja, buscar um projeto que tem uma palavra específica no título.
 
 ```js
@@ -104,7 +103,7 @@ app.get('/projects', (request, response) => {
 });
 ```
 
-### Criação de um projeto 
+## Criação de um projeto 
 Através do método post que consigo criar novos projetos. 
 
 ```js
@@ -118,7 +117,7 @@ app.post('/projects', (request, response) => {
 })
 ```
 
-### Atualiza um projeto 
+## Atualiza um projeto 
 Através do método put eu consigo atualizar um projeto já existente.
 
 ```js
@@ -150,7 +149,7 @@ app.put('/projects/:id', (request, response) => {
 });
 ```
 
-### Deleta um projeto 
+## Deleta um projeto 
 Através do método delete, eu consigo excluir um projeto existente.
 
 ```js
@@ -169,18 +168,35 @@ app.delete('/projects/:id', (request, response) => {
 
     return response.status(204).send(); // retorna em branco, geralmente envia com o status 204
 });
-
+```
 
 
 
 ## Ambiente de testes feito no Insomnia
+O Insomnia vai nos ajudar a testar cada rota que vamos criar. Ele vai conectar na nossa aplicação já criada pela porta 3333, para executar as rotas
+Baixar o Insomnia no site https://insomnia.rest/
+
+Começar criando uma pasta com nome Projects
+
+<img src="https://ik.imagekit.io/dxwebster/Untitled_q7XD78vzL.png"/>
+
+Vou em Manager Enviroments para criar uma variável para base_url
+
+<img src="https://ik.imagekit.io/dxwebster/Screenshot_2_kC6CPpExS.png"/>
+
+Na rota Create, eu consigo inserir um objeto em formato json no corpo da requisição na aba body.
+Assim que eu dou Send, ele cria o novo projeto.
+
+<img src="https://ik.imagekit.io/dxwebster/Untitled__1__W3v46apHx.png"/>
+
+Crio a rota List, para listar todos os projetos. Na aba Query, eu posso inserir um filtro para minha listagem.
+No exemplo abaixo, ele lista só os projetos que contém "React" no título.
 
 <img src="https://ik.imagekit.io/dxwebster/Untitled_4BH-4e4_yB.png"/>
 
-<img src="https://ik.imagekit.io/dxwebster/Untitled__2__6VfmNg0GZ.png"/>
+Crio a rota delete ou update, e através do id passado na URL, posso apagar ou atualizar apenas 1 projeto específico
 
-<img src="https://ik.imagekit.io/dxwebster/Untitled__3__hTuakvkyur.png"/>
+<img src="https://ik.imagekit.io/dxwebster/Untitled__2__6VfmNg0GZ.png"/><img src="https://ik.imagekit.io/dxwebster/Untitled__3__hTuakvkyur.png"/>
 
-<img src="https://ik.imagekit.io/dxwebster/Untitled__1__W3v46apHx.png"/>
 
 
