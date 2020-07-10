@@ -176,7 +176,13 @@ app.delete('/projects/:id', (request, response) => {
 O Insomnia vai nos ajudar a testar cada rota que vamos criar. Ele vai conectar na nossa aplicação já criada pela porta 3333, para executar as rotas
 Baixar o Insomnia no site https://insomnia.rest/
 
-Começar criando uma pasta com nome Projects
+Para executar os testes, é necessário iniciar o servidor com  o comando:
+
+```
+yarn dev
+```
+
+Lá no Insommina vamos começar criando uma pasta com nome Projects
 
 <img src="https://ik.imagekit.io/dxwebster/Untitled_q7XD78vzL.png"/>
 
