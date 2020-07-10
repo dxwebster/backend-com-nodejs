@@ -1,3 +1,28 @@
+# 🔖  Sobre
+Essa aplicação é um exemplo de como utilizar o NodeJS em conjunto com o Insomnia para criar um CRUD que cria, lista, filtra, atualiza e deleta projetos.
+
+#  🚀 Tecnologias utilizadas
+O projeto foi desenvolvido utilizando as seguintes tecnologias
+NodeJS
+Express
+Insomnia
+
+# 🗂 Como baixar o projeto
+```
+// Clonar o repositório
+$ git clone https://github.com/dxwebster/nivel-01-desafio-conceitos-nodejs.git
+
+// Entrar no diretório
+$ cd back-end
+
+// Instalar as dependências
+$ yarn init
+
+// Iniciar o projeto
+$ yarn start
+```
+    
+
 # Aplicação estilo CRUD
 
 Utilizando o Insomnia como ambiente de testes, criamos uma aplicação estilo CRUD, para listar, filtrar, atualizar e deletar informações.
