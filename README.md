@@ -1,13 +1,15 @@
-# 🔖  Sobre
+## 🔖  Sobre
 Essa aplicação é um exemplo de como utilizar o NodeJS em conjunto com o Insomnia para criar um CRUD que cria, lista, filtra, atualiza e deleta projetos.
 
-#  🚀 Tecnologias utilizadas
+## 🚀 Tecnologias utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 NodeJS
 Express
+UUIDV4
+Nodemon
 Insomnia
 
-# 🗂 Como baixar o projeto
+## 🗂 Como baixar o projeto
 ```
 // Clonar o repositório
 $ git clone https://github.com/dxwebster/nivel-01-desafio-conceitos-nodejs.git
@@ -21,28 +23,68 @@ $ yarn init
 // Iniciar o projeto
 $ yarn start
 ```
+
+## 🗂 Como criar esse projeto do zero
+
+### Instalação das bibliotecas
+
+Instalar o Node 
     
+    Fazer o donwload em https://nodejs.org/en/
 
-# Aplicação estilo CRUD
+Instalar o yarn
 
-Utilizando o Insomnia como ambiente de testes, criamos uma aplicação estilo CRUD, para listar, filtrar, atualizar e deletar informações.
+    npm install -g yarn
 
-```tsx
-const express = require('express');//importa o express
-const {uuid} = require('uuidv4');
-const app = express(); 
-app.use(express.json()); //fala pro express que vai usar json / precisa vir no começo da aplicação
+Criar uma pasta server Iniciar o node na pasta (cria o arquivo 'package.json')
 
-// Armazena uma variável na memória da aplicação (apenas para desenvolvimento)
-// Enquanto a aplicação estiver sendo executada...
-// ...as informações contidas na variável vão estar disponíveis pra todo o projeto
-// se a aplicação fechar ou reiniciar, ela volta no valor vazio
-const projects = [];
-```
+    yarn init -y
+
+Instalar o Express (cria a pasta 'node_modules' e o arquivo 'package-lock.json')
+    
+    yarn add express -D
+
+Instalar a definição de tipos do Express
+
+    yarn add @types/express -D
+    
+Instalar o Nodemon que vai detectar toda a alteração do código e reiniciar o servidor
+
+    yarn add nodemon -D
+
+No arquivo package.json, criar um script 'dev' para encurtar o comando de execução da aplicação
+
+    "dev": nodemon src/index.js"
+
+Instalar uma biblioteca que vai nos trazer ids diferentes para cada item criado
+
+    yarn add uuidv4
+
+Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escrever nossos códigos nesse arquivo index.js.
+
+### Primeiros códigos
+
+As primeiras linhas de código são as importações das bibliotecas que serão utilizadas na aplicação.
+
+    const express = require('express'); //importa a biblioteca express
+    const {uuid} = require('uuidv4'); // importa a biblioteca uuidv4
+
+Cria uma const que vai armazenamr o express e depois fala pro express que vmaos utilizar objetos json na aplicação
+
+    const app = express(); // armaenza o express
+    app.use(express.json()); //fala pro express que vai usar json
+    
+Como estamos em ambiente de desenvolvimento e não temos banco de dados, vamos utilizar uma técnica que armazena uma variável na memória da aplicação.
+Enquanto a aplicação estiver sendo executada as informações contidas na variável vão estar disponíveis pra todo o projeto. 
+Se a aplicação fechar ou reiniciar, ela volta no valor vazio
+
+    const projects = [];
+
+Agora vamos escrever a primeira rota de listagem de usuários
 
 ## Listar projeto com filtros
 
-```tsx
+```
 app.get('/projects', (request, response) => {
     const { title } = request.query;
 
@@ -58,7 +100,7 @@ app.get('/projects', (request, response) => {
 
 ## Criação de um projeto 
 
-```tsx
+```
 app.post('/projects', (request, response) => {
     const {title, owner} = request.body;
     
@@ -70,9 +112,7 @@ app.post('/projects', (request, response) => {
 })
 ```
 
-
 ## Atualiza um projeto 
-
 
 ```tsx
 app.put('/projects/:id', (request, response) => {
