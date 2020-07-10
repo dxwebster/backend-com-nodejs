@@ -104,3 +104,12 @@ app.listen(3333, () => { // segundo parâmetro é uma função para mostrar algo
 });
 ```
 
+<img src="https://ik.imagekit.io/dxwebster/Untitled_4BH-4e4_yB.png"/>
+
+<img src="https://ik.imagekit.io/dxwebster/Untitled__2__6VfmNg0GZ.png"/>
+
+<img src="https://ik.imagekit.io/dxwebster/Untitled__3__hTuakvkyur.png"/>
+
+<img src="https://ik.imagekit.io/dxwebster/Untitled__1__W3v46apHx.png"/>
+
+
