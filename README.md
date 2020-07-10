@@ -9,21 +9,6 @@ UUIDV4
 Nodemon
 Insomnia
 
-## 🗂 Como baixar o projeto
-```
-// Clonar o repositório
-$ git clone https://github.com/dxwebster/nivel-01-desafio-conceitos-nodejs.git
-
-// Entrar no diretório
-$ cd back-end
-
-// Instalar as dependências
-$ yarn init
-
-// Iniciar o projeto
-$ yarn start
-```
-
 ## 🗂 Como criar esse projeto do zero
 
 ### Instalação das bibliotecas
@@ -36,7 +21,7 @@ Instalar o yarn
 
     npm install -g yarn
 
-Criar uma pasta server Iniciar o node na pasta (cria o arquivo 'package.json')
+Criar uma pasta server e iniciar o node na pasta (cria o arquivo 'package.json')
 
     yarn init -y
 
@@ -66,25 +51,46 @@ Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escr
 
 As primeiras linhas de código são as importações das bibliotecas que serão utilizadas na aplicação.
 
-    const express = require('express'); //importa a biblioteca express
-    const {uuid} = require('uuidv4'); // importa a biblioteca uuidv4
+```js
+const express = require('express'); //importa a biblioteca express
+onst {uuid} = require('uuidv4'); // importa a biblioteca uuidv4
+```
 
-Cria uma const que vai armazenamr o express e depois fala pro express que vmaos utilizar objetos json na aplicação
+Cria uma const que vai armazenamr o express e depois fala pro express que vamos utilizar objetos json na aplicação
 
-    const app = express(); // armaenza o express
-    app.use(express.json()); //fala pro express que vai usar json
+```js
+const app = express(); // armaenza o express
+app.use(express.json()); //fala pro express que vai usar json
+```
     
 Como estamos em ambiente de desenvolvimento e não temos banco de dados, vamos utilizar uma técnica que armazena uma variável na memória da aplicação.
-Enquanto a aplicação estiver sendo executada as informações contidas na variável vão estar disponíveis pra todo o projeto. 
-Se a aplicação fechar ou reiniciar, ela volta no valor vazio
+Vamor criar uma variável de valor vaizo. Enquanto a aplicação estiver sendo executada as informações contidas na variável vão estar disponíveis pra todo o projeto. 
+Se a aplicação fechar ou reiniciar, ela volta ao seu valor vazio.
 
-    const projects = [];
+```js
+const projects = [];
+```
 
-Agora vamos escrever a primeira rota de listagem de usuários
+A última linhas de código será uma função que vai executar o node através de uma porta HTTP para que possamos fazer os testes.
+O primeiro parâmetro é a porta, nesse caso 3333, e o segundo parâmetro é uma função que vai exibir algo no terminal para que saibamos que o servidor está funcionando.
 
-## Listar projeto com filtros
+```js
+app.listen(3333, () => {console.log('Back-end started!');});
+```
+
+Nossas rotas que irão listar, criar, deletar, e atualizar projetos vão ficar sempre antes dessa linha de código que acabamos de criar. O arquivo então terá o seguinte formato
 
 ```
+[Códigos de imports]
+[Rotas]
+[Código app.listen()]
+```
+
+
+### Listar projeto com filtros
+Com o método get, consigo gerar uma lista de todos os projetos que existem. E com o método filter() consigo fazer filtros, ou seja, buscar um projeto que tem uma palavra específica no título.
+
+```js
 app.get('/projects', (request, response) => {
     const { title } = request.query;
 
@@ -98,23 +104,24 @@ app.get('/projects', (request, response) => {
 });
 ```
 
-## Criação de um projeto 
+### Criação de um projeto 
+Através do método post que consigo criar novos projetos. 
 
-```
+```js
 app.post('/projects', (request, response) => {
     const {title, owner} = request.body;
     
     const project = {id: uuid(), title, owner} // cria um novo projeto
     projects.push(project); // inclui no array projects o novo projeto
 
-    //exibe o projeto recém criado
-    return response.json(project); 
+    return response.json(project); //exibe o projeto recém criado
 })
 ```
 
-## Atualiza um projeto 
+### Atualiza um projeto 
+Através do método put eu consigo atualizar um projeto já existente.
 
-```tsx
+```js
 app.put('/projects/:id', (request, response) => {
     const {id} = request.params;
     const {title, owner} = request.body;
@@ -143,10 +150,10 @@ app.put('/projects/:id', (request, response) => {
 });
 ```
 
-## Deleta um projeto 
+### Deleta um projeto 
+Através do método delete, eu consigo excluir um projeto existente.
 
-
-```tsx
+```js
 app.delete('/projects/:id', (request, response) => {
     const {id} = request.params;
     
@@ -163,11 +170,9 @@ app.delete('/projects/:id', (request, response) => {
     return response.status(204).send(); // retorna em branco, geralmente envia com o status 204
 });
 
-//adiciona a porta para executar o node 
-app.listen(3333, () => { // segundo parâmetro é uma função para mostrar algo no terminal
-    console.log('Back-end started!');
-});
-```
+
+
+
 ## Ambiente de testes feito no Insomnia
 
 <img src="https://ik.imagekit.io/dxwebster/Untitled_4BH-4e4_yB.png"/>
