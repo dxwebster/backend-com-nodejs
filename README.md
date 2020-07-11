@@ -11,7 +11,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 ## 🗂 Testar essa aplicação utilizando esse projeto
 Caro você queria utilizar esse repositório e testar a aplicação, execute os seguintes passos, e depois vá direto para a
-[configuração do Insomnia](#-Ambiente-de-testes-no-Insomnia).
+[configuração do Insomnia](#ambiente-de-testes-no-insomnia).
     
     // Clonar o repositório
     $ git clone https://github.com/dxwebster/nivel-01-back-end-com-nodejs
