@@ -36,7 +36,9 @@ Primeiro passo é instalar o Node no seu computador:
 
 **Instalar o yarn**: `npm install -g yarn`
 
-**Criar uma pasta server e iniciar o node na pasta** _(cria o arquivo 'package.json')_: `yarn init -y`
+Criar uma pasta 'server' que vai conter nossa aplicação.
+
+**Iniciar o node na pasta** _(cria o arquivo 'package.json')_: `yarn init -y`
 
 **Instalar o Express** _(cria a pasta 'node_modules' e o arquivo 'package-lock.json')_: `yarn add express -D`
 
