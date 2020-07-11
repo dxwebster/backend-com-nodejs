@@ -175,8 +175,7 @@ app.delete('/projects/:id', (request, response) => {
 
 ## Configuração para rodar o servidor
 
-Para executar os testes, é necessário iniciar o servidor.
-No arquivo package.json, setar `"main": "src/index.js"`, criar um script 'dev' para encurtar o comando de execução da aplicação `"dev": "nodemon"`.
+Para executar a aplicação, é necessário iniciar o servidor. Podemos executar o comando `node src/index.js`, mas podemos gerar um script para deixar esse comando mais curto. No arquivo package.json, setar `"main": "src/index.js"`, criar um script 'dev' para encurtar o comando de execução da aplicação `"dev": "nodemon"`.
 
 <img src="https://ik.imagekit.io/dxwebster/Screenshot_1_ekrklS_ID4.png" width="300"/>
 
