@@ -84,7 +84,7 @@ app.listen(3333, () => {console.log('Back-end started!');});
 Nossas rotas que irão listar, criar, deletar, e atualizar projetos vão ficar sempre antes dessa linha de código que acabamos de criar. O arquivo então terá o seguinte formato
 
 ```
-[Códigos de imports]
+[Importação das bibliotecas]
 [Rotas]
 [Código app.listen()]
 ```
