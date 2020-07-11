@@ -34,17 +34,17 @@ Primeiro passo é instalar o Node no seu computador:
 
 ## Instalação das bibliotecas
 
-**Instalar o yarn**: `<$ npm install -g yarn>`
+**Instalar o yarn**: `npm install -g yarn`
 
-**Criar uma pasta server e iniciar o node na pasta** (cria o arquivo 'package.json'): `<$ yarn init -y>`
+**Criar uma pasta server e iniciar o node na pasta** (cria o arquivo 'package.json'): `yarn init -y`
 
-**Instalar o Express** (cria a pasta 'node_modules' e o arquivo 'package-lock.json'): `<$ yarn add express -D>`
+**Instalar o Express** (cria a pasta 'node_modules' e o arquivo 'package-lock.json'): `yarn add express -D`
 
-**Instalar a definição de tipos do Express**: `<$ yarn add @types/express -D>`
+**Instalar a definição de tipos do Express**: `yarn add @types/express -D`
     
-**Instalar o Nodemon** (vai detectar toda a alteração do código e reiniciar o servidor): `<$ yarn add nodemon -D>`
+**Instalar o Nodemon** (vai detectar toda a alteração do código e reiniciar o servidor): `yarn add nodemon -D`
 
-**Instalar o uuidv4** (vai nos trazer ids diferentes para cada item criado): `<$ yarn add uuidv4>`
+**Instalar o uuidv4** (vai nos trazer ids diferentes para cada item criado): `yarn add uuidv4`
 
 Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escrever nossos códigos nesse arquivo index.js.
 
@@ -171,14 +171,14 @@ app.delete('/projects/:id', (request, response) => {
 });
 ```
 
-
-
 ## Ambiente de testes no Insomnia
 O Insomnia vai nos ajudar a testar cada rota que vamos criar. Ele vai conectar na nossa aplicação já criada pela porta 3333, para executar as rotas.
 Para baixar o Insomnia, acessar o site https://insomnia.rest/
 
 Para executar os testes, é necessário iniciar o servidor.
-No arquivo package.json, criar um script 'dev' para encurtar o comando de execução da aplicação `<"dev": nodemon src/index.js">`
+No arquivo package.json, setar `"main": "src/index.js"`, criar um script 'dev' para encurtar o comando de execução da aplicação `"dev": "nodemon"`
+
+<img src="https://ik.imagekit.io/dxwebster/Screenshot_1_ekrklS_ID4.png width="300"/>
 
 ```
    $ yarn dev
