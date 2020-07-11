@@ -30,7 +30,7 @@ Caro você queria utilizar esse repositório e testar a aplicação, execute os 
 Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero.
 Primeiro passo é instalar o Node no seu computador:
 
-**Faça o donwload em [https://nodejs.org/en/]**
+**Faça o download em [https://nodejs.org/en/]**
 
 ## Instalação das bibliotecas
 
