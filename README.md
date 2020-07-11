@@ -57,7 +57,7 @@ const express = require('express'); //importa a biblioteca express
 onst {uuid} = require('uuidv4'); // importa a biblioteca uuidv4
 ```
 
-Cria uma const que vai armazenamr o express e depois fala pro express que vamos utilizar objetos json na aplicação
+Cria uma const que vai armazenar o express e depois indico pro express que vamos utilizar objetos .json na aplicação.
 
 ```js
 const app = express(); // armaenza o express
@@ -65,14 +65,14 @@ app.use(express.json()); //fala pro express que vai usar json
 ```
     
 Como estamos em ambiente de desenvolvimento e não temos banco de dados, vamos utilizar uma técnica que armazena uma variável na memória da aplicação.
-Vamor criar uma variável de valor vaizo. Enquanto a aplicação estiver sendo executada as informações contidas na variável vão estar disponíveis pra todo o projeto. 
+Vamos criar uma variável com valor vaizo. Enquanto a aplicação estiver sendo executada as informações contidas na variável vão estar disponíveis pra todo o projeto. 
 Se a aplicação fechar ou reiniciar, ela volta ao seu valor vazio.
 
 ```js
 const projects = [];
 ```
 
-A última linhas de código será uma função que vai executar o node através de uma porta HTTP para que possamos fazer os testes.
+A última linha de código será uma função que vai executar o node através de uma porta HTTP para que possamos fazer os testes.
 O primeiro parâmetro é a porta, nesse caso 3333, e o segundo parâmetro é uma função que vai exibir algo no terminal para que saibamos que o servidor está funcionando.
 
 ```js
