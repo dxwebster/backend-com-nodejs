@@ -171,18 +171,19 @@ app.delete('/projects/:id', (request, response) => {
 });
 ```
 
-## Ambiente de testes no Insomnia
-O Insomnia vai nos ajudar a testar cada rota que vamos criar. Ele vai conectar na nossa aplicação já criada pela porta 3333, para executar as rotas.
-Para baixar o Insomnia, acessar o site https://insomnia.rest/
+## Configuração para rodar o servidor
 
 Para executar os testes, é necessário iniciar o servidor.
-No arquivo package.json, setar `"main": "src/index.js"`, criar um script 'dev' para encurtar o comando de execução da aplicação `"dev": "nodemon"`
+No arquivo package.json, setar `"main": "src/index.js"`, criar um script 'dev' para encurtar o comando de execução da aplicação `"dev": "nodemon"`.
 
 <img src="https://ik.imagekit.io/dxwebster/Screenshot_1_ekrklS_ID4.png" width="300"/>
 
-```
-   $ yarn dev
-```
+Feito isso, executar o comando `yarn dev`.
+
+## Ambiente de testes no Insomnia
+
+O Insomnia vai nos ajudar a testar cada rota que vamos criar. Ele vai conectar na nossa aplicação já criada pela porta 3333, para executar as rotas.
+Para baixar o Insomnia, acessar o site https://insomnia.rest/
 
 Lá no Insommina vamos começar criando uma pasta com nome Projects
 
