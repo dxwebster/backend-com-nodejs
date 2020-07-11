@@ -28,36 +28,23 @@ Caro você queria utilizar esse repositório e testar a aplicação, execute os 
 
 ## 🗂 Como criar essa aplicação do zero
 Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero.
+Primeiro passo é instalar o Node no seu computador:
+
+**Faça o donwload em [https://nodejs.org/en/]**
 
 ## Instalação das bibliotecas
 
-**Instalar o Node**
+**Instalar o yarn**: `<$ npm install -g yarn>`
+
+**Criar uma pasta server e iniciar o node na pasta** (cria o arquivo 'package.json'): `<$ yarn init -y>`
+
+**Instalar o Express** (cria a pasta 'node_modules' e o arquivo 'package-lock.json'): `<$ yarn add express -D>`
+
+**Instalar a definição de tipos do Express**: `<$ yarn add @types/express -D>`
     
-    Fazer o donwload em https://nodejs.org/en/
+**Instalar o Nodemon** (vai detectar toda a alteração do código e reiniciar o servidor): `<$ yarn add nodemon -D>`
 
-**Instalar o yarn**
-
-    $ npm install -g yarn
-
-**Criar uma pasta server e iniciar o node na pasta** (cria o arquivo 'package.json')
-
-    $ yarn init -y
-
-**Instalar o Express** (cria a pasta 'node_modules' e o arquivo 'package-lock.json')
-    
-    $ yarn add express -D
-
-**Instalar a definição de tipos do Express**
-
-    $ yarn add @types/express -D
-    
-**Instalar o Nodemon**, que vai detectar toda a alteração do código e reiniciar o servidor
-
-    $ yarn add nodemon -D
-
-**Instalar o uuidv4**, uma biblioteca que vai nos trazer ids diferentes para cada item criado
-
-    $ yarn add uuidv4
+**Instalar o uuidv4** (vai nos trazer ids diferentes para cada item criado): `<$ yarn add uuidv4>`
 
 Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escrever nossos códigos nesse arquivo index.js.
 
