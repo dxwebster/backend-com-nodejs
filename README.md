@@ -37,31 +37,27 @@ Abaixo você vai encontrar todas a informações de como criar essa aplicação 
 
 **Instalar o yarn**
 
-    npm install -g yarn
+    $ npm install -g yarn
 
 **Criar uma pasta server e iniciar o node na pasta** (cria o arquivo 'package.json')
 
-    yarn init -y
+    $ yarn init -y
 
 **Instalar o Express** (cria a pasta 'node_modules' e o arquivo 'package-lock.json')
     
-    yarn add express -D
+    $ yarn add express -D
 
 **Instalar a definição de tipos do Express**
 
-    yarn add @types/express -D
+    $ yarn add @types/express -D
     
 **Instalar o Nodemon**, que vai detectar toda a alteração do código e reiniciar o servidor
 
-    yarn add nodemon -D
-
-No arquivo package.json, criar um script 'dev' para encurtar o comando de execução da aplicação
-
-    "dev": nodemon src/index.js"
+    $ yarn add nodemon -D
 
 **Instalar o uuidv4**, uma biblioteca que vai nos trazer ids diferentes para cada item criado
 
-    yarn add uuidv4
+    $ yarn add uuidv4
 
 Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escrever nossos códigos nesse arquivo index.js.
 
@@ -194,10 +190,11 @@ app.delete('/projects/:id', (request, response) => {
 O Insomnia vai nos ajudar a testar cada rota que vamos criar. Ele vai conectar na nossa aplicação já criada pela porta 3333, para executar as rotas.
 Para baixar o Insomnia, acessar o site https://insomnia.rest/
 
-Para executar os testes, é necessário iniciar o servidor. Vá na pasta principal do projeto e execute o comando:
+Para executar os testes, é necessário iniciar o servidor.
+No arquivo package.json, criar um script 'dev' para encurtar o comando de execução da aplicação `<"dev": nodemon src/index.js">`
 
 ```
-yarn dev
+   $ yarn dev
 ```
 
 Lá no Insommina vamos começar criando uma pasta com nome Projects
