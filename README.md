@@ -5,7 +5,7 @@ Esse é um exemplo de como utilizar o NodeJS em conjunto com o Insomnia para cri
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 * NodeJS
 * Express
-* UUIDV4
+* uuidv4
 * Nodemon
 * Insomnia
 
@@ -36,15 +36,15 @@ Primeiro passo é instalar o Node no seu computador:
 
 **Instalar o yarn**: `npm install -g yarn`
 
-**Criar uma pasta server e iniciar o node na pasta** (cria o arquivo 'package.json'): `yarn init -y`
+**Criar uma pasta server e iniciar o node na pasta** _(cria o arquivo 'package.json')_: `yarn init -y`
 
-**Instalar o Express** (cria a pasta 'node_modules' e o arquivo 'package-lock.json'): `yarn add express -D`
+**Instalar o Express** _(cria a pasta 'node_modules' e o arquivo 'package-lock.json')_: `yarn add express -D`
 
 **Instalar a definição de tipos do Express**: `yarn add @types/express -D`
     
-**Instalar o Nodemon** (vai detectar toda a alteração do código e reiniciar o servidor): `yarn add nodemon -D`
+**Instalar o Nodemon** _(vai detectar toda a alteração do código e reiniciar o servidor)_: `yarn add nodemon -D`
 
-**Instalar o uuidv4** (vai nos trazer ids diferentes para cada item criado): `yarn add uuidv4`
+**Instalar o uuidv4** _(vai nos trazer ids diferentes para cada item criado)_: `yarn add uuidv4`
 
 Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escrever nossos códigos nesse arquivo index.js.
 
@@ -54,7 +54,7 @@ As primeiras linhas de código são as importações das bibliotecas que serão 
 
 ```js
 const express = require('express'); //importa a biblioteca express
-onst {uuid} = require('uuidv4'); // importa a biblioteca uuidv4
+const {uuid} = require('uuidv4'); // importa a biblioteca uuidv4
 ```
 
 Cria uma const que vai armazenar o express e depois indico pro express que vamos utilizar objetos .json na aplicação.
