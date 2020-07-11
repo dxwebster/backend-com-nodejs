@@ -1,15 +1,32 @@
 ## 🔖  Sobre
-Essa aplicação é um exemplo de como utilizar o NodeJS em conjunto com o Insomnia para criar um CRUD que cria, lista, filtra, atualiza e deleta projetos.
+Esse é um exemplo de como utilizar o NodeJS em conjunto com o Insomnia para criar uma aplicação que cria, lista, filtra, atualiza e deleta projetos, conhecida como CRUD.
 
 ## 🚀 Tecnologias utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias
-NodeJS
-Express
-UUIDV4
-Nodemon
-Insomnia
+* NodeJS
+* Express
+* UUIDV4
+* Nodemon
+* Insomnia
 
-## 🗂 Como criar esse projeto do zero
+## 🗂 Testar essa aplicação utilizando esse projeto
+Caro você queria utilizar esse repositório e testar a aplicação, execute os seguintes passos, e depois vá direto para a [configuração do Insomnia](#-Ambiente-de-testes-no-Insomnia).
+    
+    // Clonar o repositório
+    $ git clone https://github.com/dxwebster/nivel-01-back-end-com-nodejs
+
+    // Entrar no diretório
+    $ cd nivel-01-back-end-com-nodejs
+
+    // Instalar as dependências
+    $ yarn install
+
+    // Iniciar o projeto
+    $ yarn start
+
+
+## 🗂 Como criar essa aplicação do zero
+Abaixo você vai encontrar todas a informações de como criar essa aplicação do zero.
 
 ## Instalação das bibliotecas
 
@@ -172,11 +189,11 @@ app.delete('/projects/:id', (request, response) => {
 
 
 
-## Ambiente de testes feito no Insomnia
-O Insomnia vai nos ajudar a testar cada rota que vamos criar. Ele vai conectar na nossa aplicação já criada pela porta 3333, para executar as rotas
-Baixar o Insomnia no site https://insomnia.rest/
+## Ambiente de testes no Insomnia
+O Insomnia vai nos ajudar a testar cada rota que vamos criar. Ele vai conectar na nossa aplicação já criada pela porta 3333, para executar as rotas.
+Para baixar o Insomnia, acessar o site https://insomnia.rest/
 
-Para executar os testes, é necessário iniciar o servidor com  o comando:
+Para executar os testes, é necessário iniciar o servidor. Vá na pasta principal do projeto e execute o comando:
 
 ```
 yarn dev
