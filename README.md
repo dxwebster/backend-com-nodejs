@@ -178,7 +178,7 @@ Para baixar o Insomnia, acessar o site https://insomnia.rest/
 Para executar os testes, é necessário iniciar o servidor.
 No arquivo package.json, setar `"main": "src/index.js"`, criar um script 'dev' para encurtar o comando de execução da aplicação `"dev": "nodemon"`
 
-<img src="https://ik.imagekit.io/dxwebster/Screenshot_1_ekrklS_ID4.png width="300"/>
+<img src="https://ik.imagekit.io/dxwebster/Screenshot_1_ekrklS_ID4.png" width="300"/>
 
 ```
    $ yarn dev
