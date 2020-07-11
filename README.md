@@ -10,7 +10,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias
 * Insomnia
 
 ## 🗂 Testar essa aplicação utilizando esse projeto
-Caro você queria utilizar esse repositório e testar a aplicação, execute os seguintes passos, e depois vá direto para a
+Caso você queira utilizar esse repositório e testar a aplicação, execute os seguintes passos, e depois vá direto para a
 [configuração do Insomnia](#ambiente-de-testes-no-insomnia).
     
     // Clonar o repositório
