@@ -193,16 +193,17 @@ Vou em Manager Enviroments para criar uma variável para base_url
 Na rota Create, eu consigo inserir um objeto em formato json no corpo da requisição na aba body.
 Assim que eu dou Send, ele cria o novo projeto.
 
-<img src="https://ik.imagekit.io/dxwebster/Untitled__1__W3v46apHx.png"/>
+<img src="https://ik.imagekit.io/dxwebster/Screenshot_1_iSnHgDwls.png" width="700"/>
 
-Crio a rota List, para listar todos os projetos. Na aba Query, eu posso inserir um filtro para minha listagem.
-No exemplo abaixo, ele lista só os projetos que contém "React" no título.
+Crio a rota List, para listar todos os projetos. 
+<img src="https://ik.imagekit.io/dxwebster/list_arzBjWOAa.png" width="700"/>
 
-<img src="https://ik.imagekit.io/dxwebster/Untitled_4BH-4e4_yB.png"/>
+Na aba Query, eu posso inserir um filtro para minha listagem. No exemplo abaixo, ele lista só os projetos que contém "React" no título.
+<img src="https://ik.imagekit.io/dxwebster/list-filter_93Vs9fZpJR.png" width="700"/>
 
 Crio a rota delete ou update, e através do id passado na URL, posso apagar ou atualizar apenas 1 projeto específico
 
-<img src="https://ik.imagekit.io/dxwebster/Untitled__2__6VfmNg0GZ.png"/><img src="https://ik.imagekit.io/dxwebster/Untitled__3__hTuakvkyur.png"/>
+<img src="https://ik.imagekit.io/dxwebster/Untitled__2__6VfmNg0GZ.png" width="700"/><img src="https://ik.imagekit.io/dxwebster/Untitled__3__hTuakvkyur.png" width="700"/>
 
 
 
