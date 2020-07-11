@@ -195,15 +195,14 @@ Assim que eu dou Send, ele cria o novo projeto.
 
 <img src="https://ik.imagekit.io/dxwebster/Screenshot_1_iSnHgDwls.png" width="700"/>
 
-Crio a rota List, para listar todos os projetos. 
+Na rota List, posso listar todos os projetos existentes.
+
 <img src="https://ik.imagekit.io/dxwebster/list_arzBjWOAa.png" width="700"/>
 
 Na aba Query, eu posso inserir um filtro para minha listagem. No exemplo abaixo, ele lista só os projetos que contém "React" no título.
+
 <img src="https://ik.imagekit.io/dxwebster/list-filter_93Vs9fZpJR.png" width="700"/>
 
-Crio a rota delete ou update, e através do id passado na URL, posso apagar ou atualizar apenas 1 projeto específico
+Na rota delete ou update, e através do id passado na URL, posso apagar ou atualizar apenas 1 projeto específico
 
-<img src="https://ik.imagekit.io/dxwebster/Untitled__2__6VfmNg0GZ.png" width="700"/><img src="https://ik.imagekit.io/dxwebster/Untitled__3__hTuakvkyur.png" width="700"/>
-
-
-
+<img src="https://ik.imagekit.io/dxwebster/update_J9Xxv--MO.png" width="700"/>
