@@ -48,6 +48,8 @@ Criar uma pasta 'server' que vai conter nossa aplicação.
 
 **Instalar o uuidv4** _(vai nos trazer ids diferentes para cada item criado)_: `yarn add uuidv4`
 
+**Instalar o cors** _(configuração para uma futura conexão com front-end): `yarn add cors`
+
 Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escrever nossos códigos nesse arquivo index.js.
 
 ## Primeiros códigos
@@ -57,12 +59,15 @@ As primeiras linhas de código são as importações das bibliotecas que serão 
 ```js
 const express = require('express'); //importa a biblioteca express
 const {uuid} = require('uuidv4'); // importa a biblioteca uuidv4
+const cors = require('cors'); // importa a biblioteca cors
 ```
 
 Cria uma const que vai armazenar o express e depois indico pro express que vamos utilizar objetos .json na aplicação.
 
 ```js
 const app = express(); // armaenza o express
+
+app.use(cors()); // usa o cors para conectar com o front futuramente
 app.use(express.json()); //fala pro express que vai usar json
 ```
     
