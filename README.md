@@ -48,7 +48,7 @@ Criar uma pasta 'server' que vai conter nossa aplicação.
 
 **Instalar o uuidv4** _(vai nos trazer ids diferentes para cada item criado)_: `yarn add uuidv4`
 
-**Instalar o cors** _(configuração para uma futura conexão com front-end): `yarn add cors`
+**Instalar o cors** _(configuração para uma futura conexão com front-end)_: `yarn add cors`
 
 Criar uma nova pasta 'src'e um arquivo 'index.js' dentro dessa pasta. Vamos escrever nossos códigos nesse arquivo index.js.
 
